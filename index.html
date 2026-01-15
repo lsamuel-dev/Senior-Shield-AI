@@ -1,16 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Thomas Christian - AI Project Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Senior Shield AI | Your Protection</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-size: 24px;
+        background-color: #fcfbf9; /* Cream background */
+        color: #001b3d; /* Deep Navy text */
+        font-family: "Verdana", sans-serif;
+      }
+      .card {
+        background-color: #ffffff;
+        border: 4px solid #001b3d;
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 40px;
+      }
+      h1 {
+        font-size: 64px;
+        font-weight: 900;
+        color: #003366;
+        border-bottom: 5px solid #003366;
+      }
+
+      /* Accessible Buttons with "Safe Hover" */
+      .btn-check-scam {
+        background-color: #1e5631; /* Forest Green */
+        color: #ffffff !important;
+        padding: 25px;
+        font-size: 30px;
+        font-weight: bold;
+        border: 4px solid #000000;
+        border-radius: 12px;
+        width: 100%;
+        transition: all 0.3s ease; /* Smooth transition for all properties */
+      }
+
+      /* Updated Hover with Bootstrap Override */
+      .btn-check-scam:hover {
+        background-color: #1e5631 !important; /* Forces the green to stay */
+        color: #ffffff !important; /* Forces the text to stay white */
+        filter: brightness(
+          115%
+        ); /* Makes it slightly lighter instead of white */
+        transform: scale(1.02);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-panic {
+        background-color: #8b0000; /* Burgundy */
+        color: #ffffff !important;
+        padding: 25px;
+        font-size: 30px;
+        font-weight: bold;
+        border: 4px solid #000000;
+        border-radius: 12px;
+        width: 100%;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn-panic:hover {
+        background-color: #8b0000 !important; /* Forces the burgundy to stay */
+        color: #ffffff !important;
+        filter: brightness(115%);
+        transform: scale(1.02);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    </style>
   </head>
   <body>
-    <h1>My Project Portfolio</h1>
-    <ul>
-      <li>
-        <a href="./Project1-AI-Prompt-Creator/"
-          >AI Prompt Creator Tool For Seniors</a
+    <div class="container py-5">
+      <header class="text-center mb-5">
+        <h1>SENIOR SHIELD AI</h1>
+        <p class="lead">
+          <strong>Simple and Secure Protection for You.</strong>
+        </p>
+      </header>
+
+      <div class="card p-4 shadow-lg">
+        <label class="section-label">1. Check a Text or Email:</label>
+        <p>Paste the suspicious message in the box below:</p>
+
+        <form action="/analyze" method="POST">
+          <textarea
+            name="message_text"
+            class="form-control mb-4"
+            rows="5"
+            style="font-size: 1.5rem; border: 2px solid #666"
+            placeholder="Paste suspicious text here..."
+          ></textarea>
+
+          <button type="submit" class="btn btn-check-scam w-100">
+            CLICK HERE TO CHECK FOR SCAMS
+          </button>
+        </form>
+      </div>
+
+      <div class="card p-4 shadow-lg">
+        <label class="section-label">2. Strange Call from Family?</label>
+        <p>
+          If they ask for money, ask for your <strong>Family Code Word</strong>.
+        </p>
+        <p><em>If they don't know it, HANG UP immediately.</em></p>
+      </div>
+
+      <div class="card p-4 shadow-lg bg-white">
+        <label class="section-label">3. Need Help Right Now?</label>
+        <p>Talk to a real person who can help you:</p>
+        <a href="tel:18333728311" class="btn btn-panic w-100"
+          >CALL THE FRAUD HOTLINE</a
         >
-      </li>
-    </ul>
+      </div>
+
+      <footer class="text-center mt-5 text-muted">
+        <p>Thomas Christian Studio | 2026 Safety Tool</p>
+      </footer>
+    </div>
   </body>
 </html>
